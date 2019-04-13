@@ -1,0 +1,9 @@
+WSA_COM = {
+	color = rgb { 233  59  4 }
+	color_ui = rgb { 233  59  4 }
+}
+
+USA_ALT = {
+	color = rgb { 233  59  4 }
+	color_ui = rgb { 233  59  4 }
+}

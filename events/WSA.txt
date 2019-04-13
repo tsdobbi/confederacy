@@ -1,0 +1,611 @@
+﻿###########################
+# WSA Events
+###########################
+
+add_namespace = wsa
+
+
+# WSA Secedes
+country_event = {
+	id = wsa.800
+	title = wsa.800.t
+	desc = wsa.800.d
+	picture = GFX_wsa_event
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Join WSA
+		name = wsa.800.b
+		WSA = { change_tag_from = USA}
+	}
+	option = { # Support the Union
+		name = wsa.800.a
+	}
+}
+
+
+#Surrender when WSA has taken too much land
+country_event = {
+	id = wsa.801
+	title = wsa.801.t
+	desc = wsa.801.d
+	picture = GFX_wsa_advance
+	
+	trigger = {
+		tag = USA
+		has_war_with = WSA
+		surrender_progress > 0.10
+		has_civil_war = no
+		is_in_faction = no
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	#Create an armistice
+	option = {
+		name = wsa.801.a
+		ai_chance = {
+			base = 8
+		}
+		WSA = {
+			country_event = { id = wsa.802 }
+		}
+		custom_effect_tooltip = wsa.801.a_tt
+		effect_tooltip = {
+			WSA = { 
+				white_peace = {
+					tag = USA 
+					message = USA_offer_peace 
+				} 
+			}
+		}
+		
+		#Cancel guarantees -- Offering the Confederacy Peace hurts US prestige and revokes US guarantees in the Americas.
+			diplomatic_relation = {
+				country = CUB
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = HAI
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = DOM
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = GUA
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = ELS
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = HON
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = NIC
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = COS
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = "PAN"
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = CAN
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = MEX
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = COL
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = VEN
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = ECU
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = PRU
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = BRA
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = BOL
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = PAR
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = URG
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = ARG
+				relation = guarantee
+				active = no
+			}
+			
+			diplomatic_relation = {
+				country = CHL
+				relation = guarantee
+				active = no
+			}
+	}
+
+	#Attempt conquest of WSA
+	option = {
+		name = wsa.801.b
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+}
+
+#WSA response to US armistice
+country_event = {
+	id = wsa.802
+	title = wsa.802.t
+	desc = wsa.802.d
+	picture = GFX_wsa_force_peace
+	
+	is_triggered_only = yes
+
+	#Accept peace
+	option = {
+		name = wsa.802.a
+		ai_chance = {
+			base = 9
+		}
+		white_peace = USA
+	}
+
+	#Take it all
+	option = {
+		name = wsa.802.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+			}			
+		}
+		USA = { country_event = { id = wsa.803 } }
+	}
+}
+
+#WSA says no!
+country_event = {
+	id = wsa.803
+	title = wsa.803.t
+	desc = wsa.803.d
+	picture = GFX_wsa_advance
+	
+	is_triggered_only = yes
+
+	option = {
+		name = wsa.803.a
+	}
+}
+
+# Trigger WSA Raises Troops
+country_event = {
+	id = wsa.50
+	hidden = yes
+	fire_only_once = yes
+	
+	trigger = {
+		country_exists = WSA
+		tag = WSA
+		has_war = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		 WSA = { country_event = { id = wsa.1 } } 
+	}
+	
+	option = { 
+		name = wsa.50.a
+	}
+}
+
+# WSA Raises Troops
+country_event = {
+	id = wsa.1
+	title = wsa.1.t
+	desc = wsa.1.d
+	picture = GFX_wsa_rec
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { # Raise Troops
+		name = wsa.1.a
+		load_oob = WSA_secede
+	}
+}
+
+# Revoke Pax Americana
+news_event = {
+	id = wsa.2
+	title = wsa.2.t
+	desc = wsa.2.d
+	picture = GFX_wsa_pax
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = wsa.2.a
+	}
+	option = {
+		name = wsa.2.b
+		every_other_country = {
+						limit = {
+							any_other_country = {
+								has_country_flag = monroe_doctrine
+							}
+						}
+						remove_ideas = american_protection_defence_democratic
+						remove_ideas = american_protection_drift_democratic
+						remove_ideas = american_protection_defence_communism
+						remove_ideas = american_protection_drift_communism
+						remove_ideas = american_protection_defence_fascism
+						remove_ideas = american_protection_drift_fascism
+				}
+				every_country = {
+					news_event = { hours = 6 id = wsa_news.3 }
+				}
+	}
+
+}
+
+
+country_event = {
+	id = wsa.3
+	title = wsa.3.t	# WSA asks US to create a faction.
+	desc = wsa.3.d	#
+	picture = GFX_goal_generic_major_alliance
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wsa.3.a # US Accepts the faction proposal
+		
+		ai_chance = {
+			base = 100
+		}
+		
+		effect_tooltip = {
+			create_faction = "north_american_alliance"
+			add_to_faction = WSA
+		}
+		hidden_effect = {
+			WSA = {
+				country_event = { id = wsa.4 }
+			}
+		}
+	}
+	
+	option = {
+		name = wsa.3.b # US Rejects the faction proposal
+	
+		ai_chance = {
+			base = 0
+		}
+		
+		hidden_effect = {
+			WSA = {
+				country_event = { id = wsa.5 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = wsa.4
+	title = wsa.4.t	#
+	desc = wsa.4.d	#
+	picture = GFX_report_event_canadian_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wsa.4.a
+		
+		USA = {
+			create_faction = "north_american_alliance"
+			add_to_faction = WSA
+		}
+		
+		news_event = { id = wsa_news.246 hours = 6 }
+	}
+}
+
+country_event = {
+	id = wsa.5
+	title = wsa.5.t	#
+	desc = wsa.5.d	#
+	picture = GFX_report_event_king_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wsa.5.a
+	}
+}
+
+# Destroyers for Bases
+country_event = {
+	id = wsa.6
+	title = wsa.6.t
+	desc = wsa.6.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wsa.6.a
+		custom_effect_tooltip = wsa.6.a.tt
+		hidden_effect = {
+			ENG = {	load_oob = "ENG_wsa_destroyers_for_bases" }
+			ENG = {
+				if = { limit = { 696 = { is_controlled_by = ENG } }
+					remove_state_core = 696
+				}
+				if = { limit = { 331 = { is_controlled_by = ENG } }
+					remove_state_core = 331
+				}
+				if = { limit = { 308 = { is_controlled_by = ENG } } 
+					remove_state_core = 308
+				}
+				if = { limit = { 693 = { is_controlled_by = ENG } } 
+					remove_state_core = 693
+				}
+				if = { limit = { 689 = { is_controlled_by = ENG } } 
+					remove_state_core = 689
+				}
+				if = { limit = { 691 = { is_controlled_by = ENG } } 
+					remove_state_core = 691
+				}
+				if = { limit = { 690 = { is_controlled_by = ENG } } 
+					remove_state_core = 690
+				}
+				if = { limit = { 692 = { is_controlled_by = ENG } } 
+					remove_state_core = 692
+				}
+				if = { limit = { 311 = { is_controlled_by = ENG } } 
+					remove_state_core = 311
+				}
+				if = { limit = { 687 = { is_controlled_by = ENG } } 
+					remove_state_core = 687
+				}
+			}
+			CAN = { load_oob = "CAN_wsa_destroyers_for_bases" }
+		}
+		WSA = {
+			if = { limit = { 696 = { is_controlled_by = ENG } }
+				transfer_state = 696
+			}
+			if = { limit = { 331 = { is_controlled_by = ENG } }
+				transfer_state = 331
+			}
+			if = { limit = { 308 = { is_controlled_by = ENG } } 
+				transfer_state = 308
+			}
+			if = { limit = { 693 = { is_controlled_by = ENG } } 
+				transfer_state = 693
+			}
+			if = { limit = { 689 = { is_controlled_by = ENG } } 
+				transfer_state = 689
+			}
+			if = { limit = { 691 = { is_controlled_by = ENG } } 
+				transfer_state = 691
+			}
+			if = { limit = { 690 = { is_controlled_by = ENG } } 
+				transfer_state = 690
+			}
+			if = { limit = { 692 = { is_controlled_by = ENG } } 
+				transfer_state = 692
+			}
+			if = { limit = { 311 = { is_controlled_by = ENG } } 
+				transfer_state = 311
+			}
+			if = { limit = { 687 = { is_controlled_by = ENG } } 
+				transfer_state = 687
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = destroyers_for_bases_opinion
+			}
+		}
+	}
+
+	option = {
+		name = wsa.6.b
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 0
+			}
+		}
+		WSA = { country_event = { id = wsa.7 days = 1 } }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+# Britain refuses offer
+country_event = {
+	id = wsa.7
+	title = wsa.7.t
+	desc = wsa.7.d
+	picture = GFX_report_event_usa_destroyers
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = wsa.7.a
+	}
+}
+
+#Pressure Britain to give up colonial holdings
+country_event = {
+	id = wsa.901
+	title = wsa.901.t
+	desc = wsa.901.d
+	picture = GFX_wsa_advance
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = wsa.901.a
+		ai_chance = {
+			base = 8
+		}
+		hidden_effect = {
+		ENG = {
+				if = { limit = { 696 = { is_controlled_by = ENG } }
+					remove_state_core = 696
+				}
+				if = { limit = { 331 = { is_controlled_by = ENG } }
+					remove_state_core = 331
+				}
+				if = { limit = { 308 = { is_controlled_by = ENG } } 
+					remove_state_core = 308
+				}
+				if = { limit = { 693 = { is_controlled_by = ENG } } 
+					remove_state_core = 693
+				}
+				if = { limit = { 689 = { is_controlled_by = ENG } } 
+					remove_state_core = 689
+				}
+				if = { limit = { 691 = { is_controlled_by = ENG } } 
+					remove_state_core = 691
+				}
+				if = { limit = { 690 = { is_controlled_by = ENG } } 
+					remove_state_core = 690
+				}
+				if = { limit = { 692 = { is_controlled_by = ENG } } 
+					remove_state_core = 692
+				}
+				if = { limit = { 311 = { is_controlled_by = ENG } } 
+					remove_state_core = 311
+				}
+				if = { limit = { 687 = { is_controlled_by = ENG } } 
+					remove_state_core = 687
+				}
+			}
+		}
+		WSA = {
+			if = { limit = { 696 = { is_controlled_by = ENG } }
+				transfer_state = 696
+			}
+			if = { limit = { 331 = { is_controlled_by = ENG } }
+				transfer_state = 331
+			}
+			if = { limit = { 308 = { is_controlled_by = ENG } } 
+				transfer_state = 308
+			}
+			if = { limit = { 693 = { is_controlled_by = ENG } } 
+				transfer_state = 693
+			}
+			if = { limit = { 689 = { is_controlled_by = ENG } } 
+				transfer_state = 689
+			}
+			if = { limit = { 691 = { is_controlled_by = ENG } } 
+				transfer_state = 691
+			}
+			if = { limit = { 690 = { is_controlled_by = ENG } } 
+				transfer_state = 690
+			}
+			if = { limit = { 692 = { is_controlled_by = ENG } } 
+				transfer_state = 692
+			}
+			if = { limit = { 311 = { is_controlled_by = ENG } } 
+				transfer_state = 311
+			}
+			if = { limit = { 687 = { is_controlled_by = ENG } } 
+				transfer_state = 687
+			}
+		}
+	}
+	option = {
+		name = wsa.901.b
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 0
+			}
+		}
+		WSA = { country_event = { id = wsa.902 days = 1 } }
+		ai_chance = { factor = 0 }
+	}
+			
+}
+# Britain refuses oto give up colonial holdings
+country_event = {
+	id = wsa.902
+	title = wsa.902.t
+	desc = wsa.902.d
+	picture = GFX_report_event_usa_destroyers
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = wsa.902.a
+	}
+}
+

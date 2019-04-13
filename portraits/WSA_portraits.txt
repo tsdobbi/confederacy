@@ -1,0 +1,65 @@
+WSA = {
+	army = {
+		male = {
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_1.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_2.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_3.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_4.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_5.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_6.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_7.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_8.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_9.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_10.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_11.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_1.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_2.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_3.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_4.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_5.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_6.dds"
+		}
+	}
+}
+
+WSA_COM = {
+	army = {
+		male = {
+			"gfx/leaders/WSA/Portrait_wsa_com_1.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_1.dds"
+			"gfx/leaders/WSA/Portrait_wsa_com_2.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_2.dds"
+			"gfx/leaders/WSA/Portrait_wsa_com_3.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_3.dds"
+			"gfx/leaders/WSA/Portrait_wsa_com_4.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_4.dds"
+			"gfx/leaders/WSA/Portrait_wsa_com_5.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_5.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_6.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_7.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_8.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_9.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_10.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_land_11.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/WSA/Portrait_wsa_com_nav_1.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_1.dds"
+			"gfx/leaders/WSA/Portrait_wsa_com_nav_2.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_2.dds"
+			"gfx/leaders/WSA/Portrait_wsa_com_nav_3.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_3.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_4.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_5.dds"
+			"gfx/leaders/WSA/Portrait_WSA_Generic_navy_6.dds"
+		}
+	}
+}

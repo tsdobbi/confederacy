@@ -1,0 +1,23 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_WSA_independent"
+		texturefile = "gfx/interface/goals/WSA_independent.dds"			
+	}	
+	SpriteType = {
+		name = "GFX_WSA_communism"
+		texturefile = "gfx/interface/goals/WSA_communism.dds"			
+	}
+	SpriteType = {
+		name = "GFX_WSA_demo"
+		texturefile = "gfx/interface/goals/WSA_demo.dds"			
+	}
+	SpriteType = {
+		name = "GFX_WSA_fascism"
+		texturefile = "gfx/interface/goals/WSA_fascism.dds"			
+	}
+	SpriteType = {
+		name = "GFX_WSA_neutral"
+		texturefile = "gfx/interface/goals/WSA_neutral.dds"			
+	}
+
+}

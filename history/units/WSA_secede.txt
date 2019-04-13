@@ -1,0 +1,329 @@
+﻿
+units = {
+	####### CONCS Theater #######
+	# Army of Northern Virginia
+	division = {			
+		name = "1st Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "2nd Alabama Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}	
+	division = {			
+		name = "3rd Florida Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "4th South Carolina Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "5th North Carolina Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "6th Texas Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "7th Georgia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "8th Louisiana Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "9th Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "10th Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	
+	division = {			
+		name = "11th Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "12th Alabama Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}	
+	division = {			
+		name = "13th Florida Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "14th South Carolina Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "15th North Carolina Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "16th Texas Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "17th Georgia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "18th Louisiana Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "19th Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "20th Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "21st Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "22nd Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "23rd Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	division = {			
+		name = "24th Virginia Infantry"
+		location = 788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.00
+
+	}
+	
+	### WSA NAVY
+	navy = {					
+		name = "Battleship Squadron 1"				
+		base = 788
+		location = 788 # Norfolk
+		ship = { name = "CSS Peralta" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WSA  } } }				
+		ship = { name = "CSS Mississippi" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WSA  } } }				
+		ship = { name = "CSS Bentonville" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WSA  } } }	
+		ship = { name = "CSS Fort Stedman" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WSA  } } }				
+		ship = { name = "CSS Oak Road" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WSA  } } }				
+		ship = { name = "CSS Five Forks" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WSA  } } }		
+	}	
+	navy = {					
+		name = "Cruiser Squadron 1"				
+		base = 788
+		location = 788 # Norfolk
+		ship = { name = "CSS North Anna" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Old Church" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Cold Harbor" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Piedmont" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }	
+		ship = { name = "CSS Pocotaligo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Island Mound" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Fairfield" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Salyersville" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }	
+		ship = { name = "CSS Morrisville" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Anderson" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WSA } } }			
+	}	
+	
+	navy = {					
+		name = "Cruiser Squadron 2"				
+		base = 788
+		location = 788 # Norfolk
+		ship = { name = "CSS Augusta" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Tuscaloosa" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = WSA  } } }
+		ship = { name = "CSS Tubac" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Apache Pass" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = WSA  } } }
+		ship = { name = "CSS Fort Buchanan" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = WSA } } }				
+		ship = { name = "CSS Stanwix Station" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = WSA  } } }		
+	}	
+	navy = {					
+		name = "CSS Petersburg"				
+		base = 788
+		location = 788 # Norfolk
+		ship = { name = "CSS Petersburg" definition = carrier equipment = { carrier_2 = { amount = 1 owner = WSA } } 
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "WSA" amount = 8 } # historical: 36
+				cv_CAS_equipment_1 =  { owner = "WSA" amount = 14 } # historical: 15
+				cv_nav_bomber_equipment_1 =  { owner = "WSA" amount = 8 } # historical: 12
+			}
+		}
+	}
+	
+	navy = {					
+		name = "Destroyer Flotilla  1"				
+		base = 788
+		location = 788 # Norfolk
+		# 13th Destroyer Division				
+		ship = { name = "CSS Klem" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }		
+		ship = { name = "CSS Selma" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }	
+		ship = { name = "CSS Namozine Church" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }		
+		ship = { name = "CSS Amelia Springs" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }
+		ship = { name = "CSS High Bridge" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }		
+		ship = { name = "CSS Cumberland Church" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }
+		ship = { name = "CSS Appomattox Station" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }		
+		ship = { name = "CSS Appomattox Court House" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }
+		ship = { name = "CSS Fort Blakeley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }		
+		ship = { name = "CSS Gloucester" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }
+		ship = { name = "CSS Athens" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }		
+		ship = { name = "CSS Cockle Creek" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }
+		ship = { name = "CSS Blackwater Creek" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }		
+		ship = { name = "CSS Elizabeth City" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WSA } } }		
+	}
+}
+
+### WSAAF Air Force
+air_wings = {
+	### 1 WSAAF Wing -- North Carolina
+	363 = {
+			# 1st Bombardment Group 
+			tac_bomber_equipment_0 = {
+				owner = "WSA" 
+				amount = 200
+			}
+			# 1st Attack Group 
+			CAS_equipment_1 = {
+				owner = "WSA" 
+				amount = 200
+			}
+			# 1st Pursuit Group 
+			fighter_equipment_0 =  {
+				owner = "WSA" 
+				amount = 300
+			}
+		}
+	}
+	
+	
+
+
+### Starting Production ###
+#instant_effect = {
+#	add_equipment_production = {
+#		equipment = {
+#			type = infantry_equipment_1
+#			creator = "WSA"
+#		}
+#		requested_factories = 2
+#		progress = 0.1
+#		efficiency = 50
+#	}
+#
+#	add_equipment_production = {
+#		equipment = {
+#			type = support_equipment_1
+#			creator = "WSA" 
+#		}
+#		requested_factories = 1
+#		progress = 0.3
+#		efficiency = 50
+#	}
+#
+#	add_equipment_production = {
+#		equipment = {
+#			type = artillery_equipment_1
+#			creator = "WSA" 
+#		}
+#		requested_factories = 1
+#		progress = 0.3
+#		efficiency = 50
+#	}
+#}

@@ -1,0 +1,95 @@
+on_actions = {
+
+	on_government_change = {
+		effect = {	
+			#If WSA flips communist use commie tag
+			if = {
+				limit = { 
+					has_government = communism 
+				}
+				if = {
+					limit = { 
+						OR = { 
+							tag = WSA 
+							original_tag = WSA 
+						} 
+					}
+					set_cosmetic_tag = WSA_COM
+				}
+			}
+			#If WSA flips back, drop commie tag
+			if = {
+				limit = { 
+					NOT = { 
+						has_government = communism 
+					}
+				}
+				if = {
+					limit = { 
+						OR = { 
+							tag = WSA 
+							original_tag = WSA 
+						} 
+					}
+					if = {
+						limit = {
+							has_cosmetic_tag = WSA_COM
+						}
+						drop_cosmetic_tag = yes
+					}
+					
+				}
+			}
+			
+			#If USA flips from demo use alt tag
+			if = {
+				limit = { 
+					NOT = {
+						has_government = democratic
+					}
+				}
+				if = {
+					limit = { 
+						OR = { 
+							tag = USA 
+							original_tag = USA 
+						} 
+					}
+					set_cosmetic_tag = USA_ALT
+				}
+			}
+			
+			#If USA flips back, drop alt tag
+			if = {
+				limit = { 
+					has_government = democratic 
+				}
+				if = {
+					limit = { 
+						OR = { 
+							tag = USA 
+							original_tag = USA 
+						} 
+					}
+					if = {
+						limit = {
+							has_cosmetic_tag = USA_ALT
+						}
+						drop_cosmetic_tag = yes
+					}
+					
+				}
+			}
+			if = {
+					limit = { 
+						OR = { 
+							tag = CSA 
+							original_tag = CSA 
+						} 
+					}
+					set_cosmetic_tag = CSA_ALT
+				}
+		}
+	}
+	
+}

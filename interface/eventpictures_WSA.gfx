@@ -1,0 +1,40 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wsa_event"
+		texturefile = "gfx/event_pictures/wsa_event.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wsa_rec"
+		texturefile = "gfx/event_pictures/wsa_rec.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wsa_advance"
+		texturefile = "gfx/event_pictures/wsa_advance.dds"
+	}
+	spriteType = {
+		name = "GFX_wsa_force_peace"
+		texturefile = "gfx/event_pictures/wsa_force_peace.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wsa_pax"
+		texturefile = "gfx/event_pictures/wsa_pax.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wsa_seg"
+		texturefile = "gfx/event_pictures/wsa_seg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wsa_war"
+		texturefile = "gfx/event_pictures/wsa_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wsa_seg2"
+		texturefile = "gfx/event_pictures/wsa_seg2.dds"
+	}
+}

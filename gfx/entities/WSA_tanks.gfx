@@ -1,0 +1,34 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "WSA_tank_light_mesh"
+		file = "gfx/models/units/tanks/WSA_tank_light.mesh"
+
+		animation = { id = "attack"			type = "ENG_tank_light_attack_animation" }
+		animation = { id = "idle"			type = "ENG_tank_light_idle_animation" }
+		animation = { id = "move"			type = "ENG_tank_light_moving_animation" }
+		
+		scale = 0.6
+		
+	}	
+	
+	pdxmesh = {
+		name = "WSA_tank_medium_mesh"
+		file = "gfx/models/units/tanks/WSA_tank_medium.mesh"
+
+		animation = { id = "attack"			type = "GER_tank_medium_attack_animation" }
+		animation = { id = "idle"			type = "GER_tank_medium_idle_animation" }
+		animation = { id = "move"			type = "GER_tank_medium_moving_animation" }
+		scale = 0.5
+	}		
+	
+	pdxmesh = {
+		name = "WSA_tank_heavy_mesh"
+		file = "gfx/models/units/tanks/WSA_tank_heavy.mesh"
+
+		animation = { id = "attack"			type = "ENG_tank_heavy_attack_animation" }
+		animation = { id = "idle"			type = "ENG_tank_heavy_idle_animation" }
+		animation = { id = "move"			type = "ENG_tank_heavy_moving_animation" }
+		scale = 0.65
+	}
+}

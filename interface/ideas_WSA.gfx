@@ -1,0 +1,110 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_haywood"
+		texturefile = "gfx/interface/ideas/idea_haywood.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_shouse"
+		texturefile = "gfx/interface/ideas/idea_shouse.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_effinger"
+		texturefile = "gfx/interface/ideas/idea_effinger.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_strom"
+		texturefile = "gfx/interface/ideas/idea_strom.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_shelby_iron"
+		texturefile = "gfx/interface/ideas/idea_shelby_iron.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_richmond_armory"
+		texturefile = "gfx/interface/ideas/idea_richmond_armory.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_athens_steam"
+		texturefile = "gfx/interface/ideas/idea_athens_steam.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_selma_nav"
+		texturefile = "gfx/interface/ideas/idea_selma_nav.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_palmetto"
+		texturefile = "gfx/interface/ideas/idea_palmetto.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_con_arm"
+		texturefile = "gfx/interface/ideas/idea_con_arm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_cook_brother"
+		texturefile = "gfx/interface/ideas/idea_cook_brother.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_bellona"
+		texturefile = "gfx/interface/ideas/idea_bellona.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_sc_military"
+		texturefile = "gfx/interface/ideas/idea_sc_military.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_tarpley"
+		texturefile = "gfx/interface/ideas/idea_tarpley.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_noble"
+		texturefile = "gfx/interface/ideas/idea_noble.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_robinson"
+		texturefile = "gfx/interface/ideas/idea_robinson.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_tredegar"
+		texturefile = "gfx/interface/ideas/idea_tredegar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_morrison"
+		texturefile = "gfx/interface/ideas/idea_morrison.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_south_oil_ms"
+		texturefile = "gfx/interface/ideas/idea_south_oil_ms.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_south_electric_ms"
+		texturefile = "gfx/interface/ideas/idea_south_electric_ms.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_wsa_norfolk_naval_yard"
+		texturefile = "gfx/interface/ideas/idea_wsa_norfolk_naval_yard.dds"
+	}
+	
+	
+	
+	
+	}

@@ -1,0 +1,1161 @@
+ideas = {
+
+	country = {
+	
+		WSA_nationalism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+
+		WSA_internationalism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				#justify_war_goal_time = -0.25
+				communism_drift = 0.1
+			}
+		}
+	
+		WSA_neutrality_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			cancel = {
+				has_war = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				#generate_wargoal_tension = 1.00
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 1.0
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
+			}
+		}
+	
+		WSA_special_forces = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				special_forces_cap = 0.02
+			}
+		}
+	
+		USA_black_volunteers = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				conscription = 0.01
+				war_support_factor = 0.05
+			}
+		}
+	
+		WSA_prepare_intervention = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				lend_lease_tension = -0.15
+			}
+		}
+	
+		WSA_independent_pol = {
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+		
+		WSA_democratic_pol = {
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				democratic_drift = 0.1
+				political_power_factor = 0.2
+			}
+		}
+	
+		WSA_collectivist_ethos_focus = {
+			
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+		
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				democratic_drift = -0.02
+			}
+		}
+		
+		WSA_liberty_ethos_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+	
+			modifier = {
+				trade_opinion_factor = 0.2
+				fascism_drift = -0.02
+				communism_drift = -0.02
+				neutrality_drift = -0.02
+			}
+			
+		}
+		
+	wsa_fac_militarism_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = 0.05
+				enemy_partisan_effect = -0.1
+			}
+	}
+	
+	wsa_com_militarism_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = 0.05
+				enemy_partisan_effect = -0.1
+			}
+	}
+	
+	wsa_dem_militarism_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = 0.05
+				enemy_partisan_effect = -0.1
+			}
+	}
+	
+	wsa_neu_militarism_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = 0.05
+				enemy_partisan_effect = -0.1
+			}
+	}
+		
+	WSA_neutrality_influence = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus#TODO
+			
+			modifier = {
+				neutrality_drift = 0.1
+				neutrality_acceptance = 85
+			}
+	}
+	
+		
+		WSA_black_workers = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+		
+		WSA_interventionism_communism = {
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				communism_drift = 0.02
+			}
+		}
+		
+		WSA_interventionism_fascism = {
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				fascism_drift = 0.02
+			}
+		}
+		
+		WSA_interventionism_2 = {
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+	}
+	political_advisor = {
+	
+		WSA_justin_haak = {
+			picture = generic_political_advisor_europe_4
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { war_industrialist }
+
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+
+		WSA_john_ashe = {
+
+			picture = generic_political_advisor_europe_5
+
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { silent_workhorse }
+		}
+		
+
+		WSA_wilfred_cut = {
+			picture = generic_political_advisor_europe_6
+
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { backroom_backstabber }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	
+		WSA_john_adams = {
+
+			picture = generic_political_advisor_europe_1
+
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		WSA_edward_alexander = {
+
+			picture = generic_political_advisor_europe_2
+				
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		WSA_james_goggin = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+		
+		WSA_harry_haywood = {
+			
+			picture = haywood
+			allowed = {
+				original_tag = "WSA"
+			}
+			
+
+			
+			traits = { communist_revolutionary }
+
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		WSA_jouett_shouse = {
+			
+			picture = shouse
+			allowed = {
+				original_tag = "WSA"
+			}
+			
+
+			
+			traits = { democratic_reformer }
+	
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		WSA_virgil_effinger = {
+			
+			picture = effinger
+			allowed = {
+				original_tag = "WSA"
+			}
+			
+
+			
+			traits = { fascist_demagogue }
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		WSA_strom_thurmond = {
+			
+			picture = strom
+			allowed = {
+				original_tag = "WSA"
+			}
+			
+
+			
+			traits = { staunch_independent }
+	
+			do_effect = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	
+
+	army_chief = {
+		
+		WSA_james_byron = {
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		WSA_hiram_granbury = {
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		WSA_jeff_leak = {
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { army_chief_drill_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+
+	}
+
+	air_chief = {
+		
+		WSA_wade_hampton = {
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		WSA_ben_hill = {
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = WSA
+			}
+		
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		WSA_thomas_eanes = {
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = WSA
+			}
+						
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+	}
+
+	navy_chief = {
+		
+		WSA_john_byrne = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		WSA_william_jackson = {
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = WSA
+			}
+		
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		WSA_justin_tobin = {
+			picture = generic_navy_europe_3
+			allowed = {
+				original_tag = WSA
+			}
+
+			traits = { navy_chief_commerce_raiding_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+	}
+
+	high_command = {
+	
+		WSA_john_denys = {
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+
+		WSA_tim_dobbins = {
+			picture = generic_army_europe_6
+			
+			allowed = {
+				original_tag = WSA
+			}
+
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+
+		WSA_art_cunning = {
+			picture = generic_army_south_america_4
+			allowed = {
+				original_tag = WSA
+			}
+
+			traits = { army_armored_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		WSA_bill_baldwin = {
+			picture = generic_army_europe_4
+			
+			allowed = {
+				original_tag = WSA
+			}
+					
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		WSA_al_blanchard = {
+
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		WSA_john_brown = {
+
+			picture = generic_air_south_america_3
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { air_bomber_interception_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		WSA_william_walker = {
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+		WSA_joseph_shelby = {
+			
+			picture = generic_army_europe_2
+
+			allowed = {
+				original_tag = WSA
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		WSA_james_sims = {
+			
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		WSA_jeff_haak = {
+			picture = generic_navy_south_america_3
+			allowed = {
+				original_tag = WSA
+			}
+
+			traits = { naval_theorist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+
+	# TECHNOLOGY
+	
+	tank_manufacturer = { 
+	
+		designer = yes
+	
+		shelby_iron = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}			
+
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		richmond_armory = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { medium_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		athens_steam = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { heavy_tank_manufacturer }
+			
+			modifier = {
+			}
+		}	
+	}
+	
+	naval_manufacturer = { 
+	
+		designer = yes
+		
+		wsa_norfolk_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		selma_nav = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		palmetto = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		con_arm = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	aircraft_manufacturer = { 
+		
+		designer = yes
+		
+		cook_brother = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+	
+		
+		bellona = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		sc_military = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		
+		tarpley = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+	
+		noble = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}		
+	}
+	
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		robinson = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		tredegar = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+	
+		
+		morrison = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+
+	
+	industrial_concern = {
+					
+		south_oil_ms = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+		}
+		
+		south_electric_ms = {
+			
+			
+			allowed = {
+				original_tag = WSA
+			}
+			
+
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+			
+			modifier = {
+			}
+		}
+	}
+
+}

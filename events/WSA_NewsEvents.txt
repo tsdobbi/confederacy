@@ -1,0 +1,539 @@
+﻿###########################
+# wsa_news Events
+###########################
+
+add_namespace = wsa_news
+
+#announce WSA
+news_event = {
+	id = wsa_news.205
+	title = wsa_news.205.t
+	desc = wsa_news.205.d
+	picture = GFX_wsa_war
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+        days = 1
+    }
+	
+	option = {
+		name = wsa_news.205.a
+	}
+}
+	
+
+#trigger revoke pax (hidden)
+news_event = {
+	id = wsa_news.51
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		country_exists = WSA
+		any_country = {
+				OR = {
+						has_idea = american_protection_defence_democratic
+						has_idea = american_protection_drift_democratic
+						has_idea = american_protection_defence_communism
+						has_idea = american_protection_drift_communism
+						has_idea = american_protection_defence_fascism
+						has_idea = american_protection_drift_fascism
+				}
+
+			}
+	}
+	
+	mean_time_to_happen = {
+        days = 1
+    }
+	
+	immediate = {
+		 WSA = { news_event = { id = wsa.2 } } 
+	}
+	
+	option = {
+		name = wsa_news.51.a
+	}
+}
+
+# WSA TRIGGER (HIDDEN)
+news_event = {
+	id = wsa_news.50
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1936.1.11
+		country_exists = USA
+	}
+	
+	mean_time_to_happen = {
+        days = 1
+    }
+	
+	immediate = {
+		 USA = { news_event = { id = wsa_news.799 } } 
+	}
+	
+	option = {
+		name = wsa_news.50.a
+	}
+}
+
+#End Segregation
+news_event = {
+	id = wsa_news.799
+	title = wsa_news.799.t
+	desc = wsa_news.799.d
+	picture = GFX_wsa_seg
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = wsa_news.799.a
+		ai_chance = {
+			base = 8
+		}
+		add_political_power = 120
+		add_ideas =  USA_black_volunteers
+			add_state_claim = 362
+			add_state_claim = 363
+			add_state_claim = 364
+			add_state_claim = 365
+			add_state_claim = 366
+			add_state_claim = 367
+			add_state_claim = 368
+			add_state_claim = 370
+			add_state_claim = 371
+			add_state_claim = 372
+			add_state_claim = 375
+			
+			release = WSA
+			
+			create_wargoal = {
+				type = annex_everything
+				target = WSA
+			}
+			261 = { add_core_of = WSA }
+			357 = { add_core_of = WSA }
+			358 = { add_core_of = WSA }
+			359 = { add_core_of = WSA }
+			360 = { add_core_of = WSA }
+			361 = { add_core_of = WSA }
+			369 = { add_core_of = WSA }
+			373 = { add_core_of = WSA }
+			374 = { add_core_of = WSA }
+			376 = { add_core_of = WSA }
+			377 = { add_core_of = WSA }
+			378 = { add_core_of = WSA }
+			379 = { add_core_of = WSA }
+			380 = { add_core_of = WSA }
+			381 = { add_core_of = WSA }
+			382 = { add_core_of = WSA }
+			383 = { add_core_of = WSA }
+			384 = { add_core_of = WSA }
+			385 = { add_core_of = WSA }
+			386 = { add_core_of = WSA }
+			387 = { add_core_of = WSA }
+			388 = { add_core_of = WSA }
+			389 = { add_core_of = WSA }
+			390 = { add_core_of = WSA }
+			391 = { add_core_of = WSA }
+			392 = { add_core_of = WSA }
+			393 = { add_core_of = WSA }
+			394 = { add_core_of = WSA }
+			395 = { add_core_of = WSA }
+			396 = { add_core_of = WSA }
+			463 = { add_core_of = WSA }
+			629 = { add_core_of = WSA }
+			
+			
+			
+			
+		country_event = { id = wsa.800 }
+		every_country = {
+			limit {
+				NOT = {
+					OR = {
+						tag = WSA
+						tag = USA
+					}
+				}
+			}
+			news_event = { hours = 6 id = wsa_news.205 }
+		}
+	}
+	
+	option = {
+		name = wsa_news.799.b
+			ai_chance = {
+			base = 2
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+}
+
+
+#Revoke Pax Americana
+news_event = {
+	id = wsa_news.3
+	title = wsa_news.3.t
+	desc = {
+		text = wsa_news.3.d_america
+		trigger = {
+			has_country_flag = monroe_doctrine
+		}
+	}
+	desc = {
+		text = wsa_news.3.d_not_america
+		trigger = {
+			NOT = {
+				has_country_flag = monroe_doctrine
+			}
+		}
+	}
+	picture = GFX_news_event_soldiers_marching
+
+	major = yes
+
+	is_triggered_only = yes
+
+	#fire_for_sender = no
+
+	option = {
+		name = wsa_news.3.a
+		trigger = {
+			has_country_flag = monroe_doctrine
+		}
+	}
+
+	option = {
+		name = wsa_news.3.b
+		trigger = {
+			is_in_faction_with = USA
+			NOT = {
+				has_country_flag = monroe_doctrine
+			}
+		}
+	}
+
+	option = {
+		name = wsa_news.3.c
+		trigger = {
+			has_war_with = USA
+		}
+	}
+
+	option = {
+		name = wsa_news.3.e
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = USA
+					has_war_with = USA
+					has_country_flag = monroe_doctrine
+				}
+			}
+		}
+	}
+}
+
+# WSA founds the North-American Alliance \w USA - CAN_north_american_alliance focus
+news_event = {
+	id = wsa_news.246
+	title = wsa_news.246.t
+	desc = wsa_news.246.d
+	picture = GFX_news_event_generic_usa_treaty
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wsa_news.246.a
+		trigger = {
+			NOT = {
+				TAG = WSA
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = wsa_news.246.b
+		trigger = { TAG = WSA }
+	}
+	option = {
+		name = wsa_news.246.c
+		trigger = { TAG = USA }
+	}
+}
+
+#Confederacy Creates Faction
+news_event = {
+	id = wsa_news.290
+	title = wsa_news.290.t
+	desc = wsa_news.290.desc
+	picture = GFX_news_event_royal_visit
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wsa_news.290.a
+		trigger = {
+			TAG = WSA
+		}
+	}
+	option = { 
+		name = wsa_news.290.b
+		trigger = { 
+			NOT = {
+				TAG = WSA
+			}
+		}
+	}
+}
+
+#US Aims to Stop Fascism
+news_event = {
+	id = wsa_news.213
+	title = wsa_news.213.t
+	desc = {
+		text = wsa_news.213.d_peace
+		trigger = {
+			NOT = {
+				WSA = {
+					has_war_with = GER
+				}
+			}
+		}
+	}
+	desc = {
+		text = wsa_news.213.d_war
+		trigger = {
+			OR = {
+				WSA = {
+					has_war_with = GER
+				}
+				any_other_country = {
+					is_in_faction_with = WSA
+					has_war_with = GER
+				}
+			}
+		}
+	}
+	picture = GFX_news_event_005
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+
+	option = {
+		name = wsa_news.213.a
+		trigger = {
+			tag = GER
+		}
+	}
+
+	option = {
+		name = wsa_news.213.b
+		trigger = {
+			is_in_faction_with = GER
+			NOT = {
+				tag = GER
+			}
+		}
+	}
+
+	option = {
+		name = wsa_news.213.c
+		trigger = {
+			has_war_with = GER
+		}
+	}
+
+	option = {
+		name = wsa_news.213.e
+		trigger = {
+			NOT = {
+				tag = GER
+			}
+			NOT = {
+				is_in_faction_with = GER
+			}
+			NOT = {
+				has_war_with = GER
+			}
+		}
+	}
+}
+
+#US Seeks to Dismantle the Comintern
+news_event = {
+	id = wsa_news.207
+	title = wsa_news.207.t
+	desc = {
+		text = wsa_news.207.d_fascism
+		trigger = {
+			has_government = fascism
+		}
+	}
+	desc = {
+		text = wsa_news.207.d_not_fascism
+		trigger = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+	picture = GFX_news_event_021
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+
+	option = {
+		name = wsa_news.207.a
+		trigger = {
+			has_government = fascism
+			NOT = {
+				is_in_faction_with = SOV
+			}
+		}
+	}
+
+	option = {
+		name = wsa_news.207.b
+		trigger = {
+			has_government = communism
+			NOT = {
+				is_in_faction_with = SOV
+			}
+		}
+	}
+
+	option = {
+		name = wsa_news.207.c
+		trigger = {
+			is_in_faction_with = SOV
+		}
+	}
+
+	option = {
+		name = wsa_news.207.e
+		trigger = {
+			NOT = {
+				has_government = fascism
+				has_government = communism
+				is_in_faction_with = WSA
+				is_in_faction_with = SOV
+			}
+		}
+	}
+
+	option = {
+		name = wsa_news.207.f
+		trigger = {
+			NOT = {
+				has_government = fascism
+			}
+			is_in_faction_with = WSA
+		}
+	}
+}
+
+#CS Aims for the Empire
+news_event = {
+	id = wsa_news.206
+	title = wsa_news.206.t
+	desc = {
+		text = wsa_news.206.d_communist
+		trigger = {
+			has_government = communism
+		}
+	}
+	desc = {
+		text = wsa_news.206.d_not_communist
+		trigger = {
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+	picture = GFX_news_event_006
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+
+	option = {
+		name = wsa_news.206.a
+		trigger = {
+			has_government = communism
+		}
+	}
+
+	option = {
+		name = wsa_news.206.b
+		trigger = {
+			OR = {
+				tag = ENG
+				is_puppet_of = ENG
+			}
+			not = {
+				has_government = communism
+			}
+		}
+	}
+
+	option = {
+		name = wsa_news.206.c
+		trigger = {
+			has_government = democratic
+			NOT = {
+				OR = {
+					tag = ENG
+					is_puppet_of = ENG
+				}
+			}
+		}
+	}
+
+	option = {
+		name = wsa_news.206.e
+		trigger = {
+			has_government = fascism
+			NOT = {
+				OR = {
+					tag = ENG
+					is_puppet_of = ENG
+				}
+			}
+		}
+	}
+
+	option = {
+		name = wsa_news.206.f
+		trigger = {
+			has_government = neutrality
+		}
+	}
+}
