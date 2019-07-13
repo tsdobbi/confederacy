@@ -477,6 +477,10 @@ ISR = {
 	color = rgb { 152  130  191 }
 	color_ui = rgb { 152  130  191 }
 }
+CSA = {
+	color = rgb { 149 176 145  }
+	color_ui = rgb { 186 205 219 }
+}
 D01 = {
 	color = rgb { 200 100 31 }
 	color_ui = rgb { 245 123 38 }
